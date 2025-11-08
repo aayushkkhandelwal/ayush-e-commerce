@@ -1,0 +1,122 @@
+/* Professional CSS for Cart Page */
+/* Navigation bar styles */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #007bff; /* Changed to blue */
+  padding: 10px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.border {
+  border: 1px solid transparent;
+  padding: 8px;
+}
+
+.border:hover {
+  border: 1px solid white;
+}
+
+.logo {
+  width: 100px;
+  height: 30px;
+  background: gray;
+}
+
+.nav-search {
+  display: flex;
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.search-select {
+  padding: 6px;
+}
+
+.nav-search input {
+  flex-grow: 1;
+  padding: 6px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.page-content {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #111;
+  font-weight: 700;
+}
+
+#cartItems > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+#cartItems img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+#cartItems div:nth-child(2) {
+  flex: 1;
+  font-weight: 600;
+}
+
+#cartItems input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+#cartItems div:nth-child(4) {
+  width: 80px;
+  text-align: right;
+  margin-left: 15px;
+  font-weight: 700;
+  color: #b12704;
+}
+
+#cartSummary {
+  font-size: 20px;
+  text-align: right;
+  margin-top: 20px;
+}
+
+#checkoutBtn {
+  display: block;
+  width: 100%;
+  background-color: #28a745; /* Changed to green */
+  border: 1px solid #1e7e34;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 12px 0;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#checkoutBtn:hover {
+  background-color: #218838; /* Darker green */
+}

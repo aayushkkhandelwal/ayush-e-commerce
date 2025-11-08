@@ -1,0 +1,306 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+/* Navigation bar styles */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #131921;
+  padding: 10px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.border {
+  border: 1px solid transparent;
+  padding: 8px;
+}
+
+.border:hover {
+  border: 1px solid white;
+}
+
+.logo {
+  /* background-image: url("amazonlogo2.jpeg"); */
+  background-size: cover;
+  width: 100px;
+  height: 30px;
+  background: #131921;
+}
+
+.nav-search {
+  display: flex;
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.search-select {
+  padding: 6px;
+}
+
+.nav-search input {
+  flex-grow: 1;
+  padding: 6px;
+}
+
+.panel {
+  display: flex;
+  background-color: #232f3e;
+  color: white;
+  padding: 10px;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+Slider styles
+.slider-container {
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.slider {
+  width: 1600px; /* 4 images * 400px */
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.slider {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.arrow-left {
+  left: 0;
+}
+
+.arrow-right {
+  right: 0;
+}
+
+/* Slide indicators */
+.slide-indicators {
+  text-align: center;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  z-index: 20;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+/* Shop section */
+.shopsection {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light gray background */
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.box-content h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.boximg img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.boximg p {
+  color: #007185;
+  cursor: pointer;
+}
+
+/* Footer styles */
+footer {
+  background-color: #131921;
+  color: white;
+  padding: 40px 20px 20px 20px;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-search {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .panel {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .shopsection {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* New styles for price, add-to-cart and like button */
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #b12704;
+  margin: 10px 0;
+}
+
+.add-to-cart {
+  background-color: #28a745; /* Changed to green */
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #218838; /* Darker green */
+}
+
+.like-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.like-btn:hover {
+  color: #e0245e;
+}
+
+.like-btn.liked {
+  color: #e0245e;
+}
+/* style for hover  */
+.box {
+  width: 300px;
+  height: 400px;
+  background: #ffffff;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  transition: 
+    background 0.4s,
+    transform 0.3s,
+    box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.box:hover {
+  background: #e9ecef; /* Light blue-gray */
+  transform: scale(1.05) ; /* Less scale for professional look */
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+.boximg img {
+  width: 200px;        /* Set equal width for all images */
+  height: 200px;       /* Set equal height for all images */
+  object-fit: cover;   /* Ensures images fill the box without distortion */
+  border-radius: 8px;  /* Optional: rounded corners for a modern look */
+  display: block;      /* Removes whitespace below image */
+  margin: 0 auto 10px; /* Centers image within box and adds space below */
+}
+

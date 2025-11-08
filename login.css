@@ -1,0 +1,171 @@
+/* Professional CSS for login page */
+/* Navigation bar styles */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000; /* Black background */
+  padding: 10px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.border {
+  border: 1px solid transparent;
+  padding: 8px;
+}
+
+.border:hover {
+  border: 1px solid white;
+}
+
+.logo {
+  width: 100px;
+  height: 30px;
+  background: gray;
+}
+
+.nav-search {
+  display: flex;
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.search-select {
+  padding: 6px;
+}
+
+.nav-search input {
+  flex-grow: 1;
+  padding: 6px;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #ffffff; /* White background */
+  margin: 0;
+  padding: 0;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #ffffff; /* White background */
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  border: 1px solid #cccccc; /* Gray border */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #111;
+  font-weight: 700;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 90%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+  border-color: #0073e6;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,115,230,0.5);
+}
+
+.error-message {
+  color: #d93025;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  min-height: 18px;
+}
+
+.login-form button[type="submit"] {
+  width: 100%;
+  background: #000000; /* Black background */
+  color: white;
+  padding: 14px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-form button[type="submit"]:hover {
+  background: #333333; /* Dark gray on hover */
+}
+
+.forgot-password {
+  display: block;
+  text-align: right;
+  font-size: 14px;
+  color: #0073e6;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.social-login {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.social-login p {
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #555;
+}
+
+.social-btn {
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.social-btn.google {
+  background-color: #db4437;
+  color: white;
+}
+
+.social-btn.google:hover {
+  background-color: #a33224;
+}
+
+.social-btn.facebook {
+  background-color: #3b5998;
+  color: white;
+}
+
+.social-btn.facebook:hover {
+  background-color: #2d4373;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart - Amazon</title>
+    <link rel="stylesheet" href="cart.css" />
+  </head>
+<body>
+  <header>
+    <div class="nav-bar">
+      <div class="logo-bar border">
+        <div class="logo"></div>
+      </div>
+      <div class="nav-adress border">
+        <p class="first-add">Deliver to</p>
+        <div class="add-icon"></div>
+        <p class="second-add">India</p>
+      </div>
+      <div class="nav-search">
+        <select class="search-select">
+          <option>All</option>
+        </select>
+        <input placeholder="Search Amazon" type="text" />
+      </div>
+      <div class="nav-sign border">
+        <a href="login.html" style="color: white; text-decoration: none;">
+          <p><span>Hello, sign in</span></p>
+          <p class="nav-second">Account & Lists</p>
+        </a>
+      </div>
+      <div class="nav-return border">
+        <p><span>Returns</span></p>
+        <p class="nav-second">& Orders</p>
+      </div>
+      <div class="nav-cart border">
+        <a href="cart.html" style="color: white; text-decoration: none;">
+          <p><span>🛒</span></p>
+          <p>Cart</p>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <h1>Your Shopping Cart</h1>
+    <div id="cartItems">
+      <!-- Cart items will be dynamically added here -->
+    </div>
+    <div id="cartSummary" style="margin-top: 20px; font-weight: bold;">
+      Total: $<span id="totalPrice">0.00</span>
+    </div>
+    <button id="checkoutBtn" style="margin-top: 20px; padding: 10px 20px; background-color: #f0c14b; border: 1px solid #a88734; cursor: pointer; font-weight: bold; border-radius: 4px;">Proceed to Checkout</button>
+  </main>
+  <script src="js/style.js"></script>
+  <script src="js/cart/cart.js"></script>
+</body>
+</html>
