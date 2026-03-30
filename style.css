@@ -2,7 +2,7 @@
   padding: 0px;
   margin: 0px;
 }
-/* Navigation bar styles */
+
 .nav-bar {
   display: flex;
   align-items: center;
@@ -66,7 +66,7 @@ Slider styles
 }
 
 .slider {
-  width: 1600px; /* 4 images * 400px */
+  width: 1600px; 
   display: flex;
   transition: transform 0.5s ease;
 }
@@ -114,7 +114,7 @@ Slider styles
   right: 0;
 }
 
-/* Slide indicators */
+
 .slide-indicators {
   text-align: center;
   position: absolute;
@@ -137,12 +137,12 @@ Slider styles
   background-color: #717171;
 }
 
-/* Shop section */
+
 .shopsection {
   display: flex;
   justify-content: center;
   padding: 20px;
-  background-color: #f8f9fa; /* Light gray background */
+  background-color: #f8f9fa; 
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -164,7 +164,7 @@ Slider styles
   cursor: pointer;
 }
 
-/* Footer styles */
+
 footer {
   background-color: #131921;
   color: white;
@@ -212,7 +212,7 @@ footer {
   color: #bbb;
 }
 
-/* Responsive styles */
+
 @media (max-width: 768px) {
   .nav-bar {
     flex-direction: column;
@@ -232,7 +232,6 @@ footer {
   }
 }
 
-/* New styles for price, add-to-cart and like button */
 
 .price {
   font-size: 18px;
@@ -242,7 +241,7 @@ footer {
 }
 
 .add-to-cart {
-  background-color: #28a745; /* Changed to green */
+  background-color: #28a745; 
   border: none;
   color: white;
   padding: 10px 15px;
@@ -273,12 +272,13 @@ footer {
 .like-btn.liked {
   color: #e0245e;
 }
-/* style for hover  */
+
+
 .box {
   width: 300px;
   height: 400px;
   background: #ffffff;
-  color: rgb(255, 255, 255);
+  color: rgb(63, 47, 47);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -291,16 +291,32 @@ footer {
 }
 
 .box:hover {
-  background: #e9ecef; /* Light blue-gray */
-  transform: scale(1.05) ; /* Less scale for professional look */
+  background: #e9ecef; 
+  transform: scale(1.05) ; 
   box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
 }
 .boximg img {
-  width: 200px;        /* Set equal width for all images */
-  height: 200px;       /* Set equal height for all images */
-  object-fit: cover;   /* Ensures images fill the box without distortion */
-  border-radius: 8px;  /* Optional: rounded corners for a modern look */
-  display: block;      /* Removes whitespace below image */
-  margin: 0 auto 10px; /* Centers image within box and adds space below */
+  width: 200px;        
+  height: 200px;       
+  object-fit: cover;   
+  border-radius: 8px;  
+  display: block;      
+  margin: 0 auto 10px; 
+}
+
+
+
+button.logoutbtn {
+  background: linear-gradient(135deg, #f0c14b, #e2a100);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button.logoutbtn:hover {
+  transform: scale(1.05);
 }
 

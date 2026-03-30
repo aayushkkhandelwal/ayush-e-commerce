@@ -1,9 +1,8 @@
-// Main JavaScript for Amazon-like website
 
-// Cart functionality
+
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// Add to cart function
+
 function addToCart(productName, price, imageSrc) {
   const existingItem = cart.find(item => item.name === productName);
   if (existingItem) {
@@ -21,7 +20,7 @@ function addToCart(productName, price, imageSrc) {
   alert(`${productName} added to cart!`);
 }
 
-// Update cart count in navigation
+
 function updateCartCount() {
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
   const cartElement = document.querySelector('.nav-cart p:last-child');
@@ -30,16 +29,16 @@ function updateCartCount() {
   }
 }
 
-// Like button functionality
+
 function toggleLike(button) {
   button.classList.toggle('liked');
 }
 
-// Initialize page
+
 document.addEventListener('DOMContentLoaded', function() {
   updateCartCount();
 
-  // Add event listeners to add-to-cart buttons
+
   const addToCartButtons = document.querySelectorAll('.add-to-cart');
   addToCartButtons.forEach(button => {
     button.addEventListener('click', function() {
@@ -51,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Add event listeners to like buttons
+ 
   const likeButtons = document.querySelectorAll('.like-btn');
   likeButtons.forEach(button => {
     button.addEventListener('click', function() {
@@ -59,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Search functionality
+
   const searchInput = document.querySelector('.nav-search input');
   const searchSelect = document.querySelector('.search-select');
   if (searchInput) {
@@ -73,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Newsletter subscription
+  
   const newsletterForm = document.querySelector('.newsletter-form');
   if (newsletterForm) {
     newsletterForm.addEventListener('submit', function(e) {
@@ -84,27 +83,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
-
-// Slider functionality (if needed)
-let currentSlide = 0;
-function moveSlide(direction) {
-  const slider = document.getElementById('slider');
-  const slides = slider.children;
-  currentSlide = (currentSlide + direction + slides.length) % slides.length;
-  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-  updateDots();
-}
-
-function goToSlide(slideIndex) {
-  currentSlide = slideIndex;
-  const slider = document.getElementById('slider');
-  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-  updateDots();
-}
-
-function updateDots() {
-  const dots = document.querySelectorAll('.dot');
-  dots.forEach((dot, index) => {
-    dot.classList.toggle('active', index === currentSlide);
-  });
-}

@@ -1,55 +1,61 @@
-// Login check script
-document.addEventListener('DOMContentLoaded', function() {
-    // Check if user is logged in
-    const isLoggedIn = localStorage.getItem('isLoggedIn');
+document.addEventListener('DOMContentLoaded', function () {
 
-    if (!isLoggedIn) {
-        // If not logged in, redirect to login page
-        if (window.location.pathname !== '/login.html' && window.location.pathname !== '/login') {
-            window.location.href = 'login.html';
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    const currentPage = window.location.pathname;
+
+    // Redirect if not logged in
+    if (!isLoggedIn && !currentPage.includes('login')) {
+        window.location.href = 'login.html';
+    }
+
+    // Redirect if already logged in
+    if (isLoggedIn && currentPage.includes('login')) {
+        window.location.href = 'indexamazon.html';
+    }
+
+    const loginForm = document.querySelector('.login-form');
+
+    if (loginForm) {
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMsg = document.getElementById('errorMsg');
+
+            // Validation
+            if (!email || !password) {
+                errorMsg.textContent = "Please fill all fields";
+                return;
+            }
+
+            if (!email.includes("@")) {
+                errorMsg.textContent = "Invalid email format";
+                return;
+            }
+
+            if (password.length < 4) {
+                errorMsg.textContent = "Password must be at least 4 characters";
+                return;
+            }
+
+            // Save login
+            // localStorage.setItem('isLoggedIn', 'true');
+            // localStorage.setItem('userEmail', email);
+
+            // Redirect
+            window.location.href = 'indexamazon.html';
+        });
+    }
+
+    // Show user email (without logout button)
+    if (isLoggedIn) {
+        const navSign = document.querySelector('.nav-sign');
+
+        if (navSign) {
+            navSign.innerHTML = `
+                <p>Hello, ${localStorage.getItem('userEmail')}</p>
+            `;
         }
-    } else {
-        // Add logout button if logged in
-        addLogoutButton();
     }
 });
-
-// Handle login form submission
-const loginForm = document.querySelector('.login-form');
-if (loginForm) {
-    loginForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Simple login simulation (accepts any email and password)
-        const email = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-
-        // Accept any email and password for simulation
-        if (email && password) {
-            localStorage.setItem('isLoggedIn', 'true');
-            localStorage.setItem('userEmail', email);
-            window.location.href = 'indexamazon.html';
-        } else {
-            alert('Please enter both email and password.');
-        }
-    });
-}
-
-// Add logout button to navigation
-function addLogoutButton() {
-    const navSign = document.querySelector('.nav-sign');
-    if (navSign) {
-        navSign.innerHTML = `
-            <p><span>Hello, ${localStorage.getItem('userEmail')}</span></p>
-            <p class="nav-second"><button onclick="logout()" style="background: none; border: none; color: white; cursor: pointer; text-decoration: underline;">Sign Out</button></p>
-        `;
-    }
-}
-
-// Handle logout (if needed, add a logout button)
-function logout() {
-    localStorage.removeItem('isLoggedIn');
-    localStorage.removeItem('userEmail');
-    localStorage.removeItem('cart');
-    window.location.href = 'login.html';
-}

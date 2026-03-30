@@ -2,12 +2,12 @@
     padding: 0px;
     margin: 0px;
 }
-/* Navigation bar styles */
+
 .nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #007bff; /* Changed to blue */
+  background-color: #000000; 
   padding: 10px;
   color: white;
   flex-wrap: wrap;

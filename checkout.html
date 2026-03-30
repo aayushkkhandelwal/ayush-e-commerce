@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+  <div class="checkout-container">
+    <h1>Checkout 🧾</h1>
+
+    
+    <div id="orderItems"></div>
+
+    <h2>Total: $<span id="totalPrice">0.00</span></h2>
+
+    
+    <form id="checkoutForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="text" placeholder="Address" required>
+      <input type="text" placeholder="Phone Number" required>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
